@@ -10,7 +10,7 @@ const projects = [
     category: "Печи трубчатые",
     location: "ООО «Славянск-ЭКО», Краснодарский край",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1518709766631-a6a7f45921e0?q=80&w=2800&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-1.jpg",
     description: "Проектирование, изготовление и монтаж трубчатой печи нагрева сырья мощностью 15 МВт. Комплектация: змеевики из стали 12Х18Н10Т, шиберные заслонки с электроприводом, обвязка технологическими трубопроводами."
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     category: "Печи трубчатые",
     location: "ПАО АНК «РОСНЕФТЬ», г. Самара",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1581092918056-9375e8bbd5e1?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-2.jpg",
     description: "Изготовление и монтаж трубчатой печи атмосферно-вакуумной трубчатки. Радиантные трубы из легированной стали, футеровка огнеупорным бетоном, система автоматического регулирования горения."
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     category: "Печи трубчатые",
     location: "ПАО «Орскнефтеоргсинтез», г. Орск",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-c8eb2e7a6c5b?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-3.jpg",
     description: "Изготовление и монтаж змеевиков из стали 15Х5М для печи атмосферной перегонки нефти. Стилоскопирование и рентген-контроль 100% сварных швов."
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     category: "Печи трубчатые",
     location: "НПЗ «Афипский», Краснодарский край",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1513828583688-c52646db85da?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-4.jpg",
     description: "Проектирование и изготовление шиберных заслонок с электроприводом для регулирования тяги в трубчатых печах. Комплектация приводами с дистанционным управлением."
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     category: "Печи трубчатые",
     location: "ПАО «ЛУКОЙЛ», г. Волгоград",
     year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1595658648327-32d9fa5d22e2?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-5.jpg",
     description: "Остановочный ремонт с заменой радиантных труб печи висбрекинга. Замена 24 труб, ремонт футеровки, ревизия горелочных устройств ГТП-3."
   },
 
@@ -52,7 +52,7 @@ const projects = [
     category: "Ректификационные колонны",
     location: "ООО «Первый Завод», г. Тула",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1565193576-64030a6c6d70?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-6.jpg",
     description: "Проектирование и монтаж ректификационной колонны диаметром 2400 мм, высотой 42 м. 48 клапанных тарелок, система орошения с регулированием флегмового числа."
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     category: "Ректификационные колонны",
     location: "ПАО АНК «Башнефть», г. Уфа",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1584467571266-1cb324e0e19b?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-7.jpg",
     description: "Капитальный ремонт и модернизация ректификационной колонны. Замена контактных устройств на высокоэффективные, усиление корпуса, пусконаладочные работы."
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     category: "Ректификационные колонны",
     location: "ПАО «Газпром», Астраханская область",
     year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356f27?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-8.jpg",
     description: "Монтаж стабилизационной колонны установки гидроочистки. Диаметр 1800 мм, 32 ситчатых тарелки, система подачи ингибиторов коррозии."
   },
 
@@ -78,7 +78,7 @@ const projects = [
     category: "Теплообменное оборудование",
     location: "ПАО «Газпром», Астраханская область",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1504916789300-396e26f3eb5f?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-9.jpg",
     description: "Изготовление и монтаж 4 кожухотрубчатых теплообменников площадью поверхности 400 м² каждый. Материал труб — сталь 12Х18Н10Т, рабочее давление 6,3 МПа."
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     category: "Теплообменное оборудование",
     location: "ООО «Славянск-ЭКО», Краснодарский край",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e15b91?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-10.jpg",
     description: "Изготовление 12 теплообменников типа «труба в трубе» для подогрева сырья. Длина секций 6 м, общая площадь теплообмена 180 м²."
   },
   {
@@ -94,7 +94,7 @@ const projects = [
     category: "Теплообменное оборудование",
     location: "НПЗ «Афипский», Краснодарский край",
     year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1581092918056-9375e8bbd5e1?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-11.jpg",
     description: "Монтаж воздушных холодильников конденсации. 8 секций по 4 вентилятора, площадь оребрения 12000 м², система регулирования температуры оборотной воды."
   },
 
@@ -104,7 +104,7 @@ const projects = [
     category: "Арматурные блоки",
     location: "ООО «Первый Завод», г. Тула",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1518709766631-a6a7f45921e0?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-12.jpg",
     description: "Проектирование и изготовление арматурного блока для установки каталитического крекинга. 24 запорных клапана, 8 регулирующих, система дистанционного управления."
   },
   {
@@ -112,7 +112,7 @@ const projects = [
     category: "Арматурные блоки",
     location: "ПАО АНК «РОСНЕФТЬ», г. Самара",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-c8eb2e7a6c5b?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-13.jpg",
     description: "Изготовление и монтаж трансферной линии диаметром 600 мм для подачи сырья в реактор. Теплоизоляция, опоры с компенсацией температурных расширений."
   },
   {
@@ -120,7 +120,7 @@ const projects = [
     category: "Арматурные блоки",
     location: "ПАО «ЛУКОЙЛ», г. Волгоград",
     year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1581092918056-9375e8bbd5e1?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-14.jpg",
     description: "Монтаж арматурного блока с запорной и предохранительной арматурой. 16 предохранительных клапанов, система сброса на факел, дренажная обвязка."
   },
 
@@ -130,7 +130,7 @@ const projects = [
     category: "Монтажные работы",
     location: "ПАО «ЛУКОЙЛ», г. Волгоград",
     year: "2023",
-    imageUrl: "https://images.unsplash.com/photo-1595658648327-32d9fa5d22e2?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-15.jpg",
     description: "Проектирование и монтаж факельной установки закрытого типа. Система автоматического розжига, сепараторы, система утилизации тепла отходящих газов."
   },
   {
@@ -138,7 +138,7 @@ const projects = [
     category: "Монтажные работы",
     location: "НПЗ «Афипский», Краснодарский край",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1584467571266-1cb324e0e19b?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-16.jpg",
     description: "Монтаж технологических трубопроводов Ду 50-1200 мм для установки каталитического риформинга. Протяженность 2,5 км, испытание давлением 1,5 Рраб."
   },
   {
@@ -146,7 +146,7 @@ const projects = [
     category: "Монтажные работы",
     location: "ТЭЦ «Новочеркасская», Ростовская область",
     year: "2022",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356f27?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-17.jpg",
     description: "Проектирование, изготовление и монтаж металлоконструкций технологической эстакады. Общий вес 180 тонн, пролет 24 м, высота 8 м."
   },
   {
@@ -154,7 +154,7 @@ const projects = [
     category: "Монтажные работы",
     location: "Мини-НПЗ «Крымск», Краснодарский край",
     year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e15b91?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-18.jpg",
     description: "Комплекс пусконаладочных работ систем КИП и автоматики установки первичной переработки нефти. Настройка АСУ ТП, проверка 240 датчиков и 85 исполнительных механизмов."
   },
   {
@@ -162,7 +162,7 @@ const projects = [
     category: "Монтажные работы",
     location: "ПАО АНК «РОСНЕФТЬ», г. Самара",
     year: "2021",
-    imageUrl: "https://images.unsplash.com/photo-1513828583688-c52646db85da?q=80&w=2670&auto=format&fit=crop",
+    imageUrl: "/images/projects/project-19.jpg",
     description: "Комплексный остановочный ремонт двух трубчатых печей за 18 суток. Замена радиантных труб, ремонт футеровки, ревизия горелок, пусконаладочные работы."
   }
 ]
