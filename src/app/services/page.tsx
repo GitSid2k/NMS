@@ -2,90 +2,36 @@ import { FileText, HardHat, Building2, Wrench, Truck, ShieldCheck, ArrowRight } 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { FadeIn, SlideUp } from "@/components/ui-custom/animations"
+import prisma from "@/lib/prisma"
 
-export default function ServicesPage() {
-  const services = [
-    {
-      icon: FileText,
-      title: "Проектирование",
-      desc: "Комплексное проектирование объектов промышленного и гражданского строительства.",
-      details: [
-        "Сбор исходно-разрешительной документации",
-        "Разработка проектной документации",
-        "Прохождение государственной экспертизы",
-        "Разработка рабочей документации"
-      ]
-    },
-    {
-      icon: HardHat,
-      title: "Строительно-монтажные работы",
-      desc: "Выполнение полного комплекса строительных работ от нулевого цикла до сдачи объекта.",
-      details: [
-        "Земляные работы и устройство фундаментов",
-        "Возведение несущих конструкций",
-        "Кровельные и фасадные работы",
-        "Внутренняя и наружная отделка"
-      ]
-    },
-    {
-      icon: Building2,
-      title: "Инженерные сети",
-      desc: "Монтаж внутренних и наружных инженерных систем и коммуникаций.",
-      details: [
-        "Водоснабжение и водоотведение",
-        "Отопление и вентиляция",
-        "Электроснабжение и освещение",
-        "Слаботочные системы"
-      ]
-    },
-    {
-      icon: Truck,
-      title: "Механизация строительства",
-      desc: "Предоставление строительной техники и механизмов с экипажем.",
-      details: [
-        "Землеройная техника",
-        "Грузоподъемные механизмы",
-        "Транспортные средства",
-        "Специализированная техника"
-      ]
-    },
-    {
-      icon: Wrench,
-      title: "Пусконаладочные работы",
-      desc: "Комплекс работ по вводу смонтированного оборудования и систем в эксплуатацию.",
-      details: [
-        "Индивидуальные испытания оборудования",
-        "Комплексное опробование систем",
-        "Настройка и регулировка параметров",
-        "Обучение персонала заказчика"
-      ]
-    },
-    {
-      icon: ShieldCheck,
-      title: "Функции генерального подрядчика",
-      desc: "Полное управление строительным проектом и ответственность за результат.",
-      details: [
-        "Организация всего комплекса работ",
-        "Координация субподрядных организаций",
-        "Контроль качества и сроков",
-        "Сдача объекта в эксплуатацию"
-      ]
-    }
-  ]
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  FileText,
+  HardHat,
+  Building2,
+  Truck,
+  Wrench,
+  ShieldCheck
+}
+
+export default async function ServicesPage() {
+  const services = await prisma.service.findMany({
+    orderBy: { order: 'asc' }
+  })
 
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header Section */}
-      <section className="bg-zinc-50 dark:bg-zinc-900 py-16 md:py-24">
+      <section className="bg-zinc-50 dark:bg-zinc-900 py-20 md:py-28">
         <div className="container">
           <div className="max-w-3xl">
             <SlideUp>
+              <div className="w-12 h-1 bg-brand-600 rounded-full mb-6"></div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
                 Наши услуги
               </h1>
             </SlideUp>
             <SlideUp delay={0.1}>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Мы предлагаем комплексные решения в области строительства и проектирования, 
                 обеспечивая высокое качество на каждом этапе реализации проекта.
               </p>
@@ -95,21 +41,24 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List */}
-      <section className="py-16 md:py-24">
+      <section className="py-20 md:py-28">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, i) => (
-              <SlideUp key={i} delay={i * 0.1} className="flex flex-col bg-background p-8 rounded-2xl shadow-sm border group hover:shadow-md transition-all">
-                <div className="h-14 w-14 rounded-xl bg-brand-50 dark:bg-brand-900/20 flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                  <service.icon className="h-7 w-7" />
+            {services.map((service: any, i: number) => {
+              const IconComponent = iconMap[service.icon] || FileText
+              const details = JSON.parse(service.details || "[]")
+              return (
+              <SlideUp key={service.id} delay={i * 0.1} className="flex flex-col bg-background p-8 rounded-3xl shadow-sm border group hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="h-14 w-14 rounded-2xl bg-brand-600/10 flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                  <IconComponent className="h-7 w-7" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-6 flex-1">{service.desc}</p>
+                <p className="text-muted-foreground mb-6 flex-1 leading-relaxed">{service.description}</p>
                 <div className="space-y-3 mb-8">
-                  {service.details.map((detail, j) => (
-                    <div key={j} className="flex items-start gap-2 text-sm">
+                  {details.map((detail: string, j: number) => (
+                    <div key={j} className="flex items-start gap-2.5 text-sm">
                       <div className="h-1.5 w-1.5 rounded-full bg-brand-600 mt-2 flex-shrink-0" />
-                      <span>{detail}</span>
+                      <span className="text-foreground/80">{detail}</span>
                     </div>
                   ))}
                 </div>
@@ -122,23 +71,24 @@ export default function ServicesPage() {
                   </Button>
                 </div>
               </SlideUp>
-            ))}
+            )})}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-brand-600 text-white">
-        <div className="container">
+      <section className="py-20 bg-gradient-to-br from-brand-600 to-brand-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTTAgMGg2MHY2MEgweiIgZmlsbD0ibm9uZSIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGZpbGw9InVybCgjZykiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4=')] opacity-50"></div>
+        <div className="container relative">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             <SlideUp>
               <h2 className="text-3xl font-bold mb-2">Нужен нестандартный подход?</h2>
-              <p className="text-brand-100 text-lg max-w-2xl">
+              <p className="text-white/80 text-lg max-w-2xl">
                 Свяжитесь с нами, и мы разработаем индивидуальное решение специально для вашего проекта.
               </p>
             </SlideUp>
             <FadeIn delay={0.2}>
-              <Button size="lg" variant="secondary" className="bg-white text-brand-600 hover:bg-zinc-100 flex-shrink-0" asChild>
+              <Button size="lg" variant="secondary" className="rounded-full bg-white text-brand-600 hover:bg-zinc-100 shadow-lg flex-shrink-0 px-8" asChild>
                 <Link href="/contacts">Обсудить проект</Link>
               </Button>
             </FadeIn>
