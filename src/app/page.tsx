@@ -91,7 +91,7 @@ export default function Home() {
             </SlideUp>
             <FadeIn delay={0.2} className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
+                src="/images/2779d35a-8259-4848-afa0-330fc9a232c7.png"
                 alt="Команда инженеров"
                 fill
                 className="object-cover"

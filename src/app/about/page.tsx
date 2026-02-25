@@ -51,7 +51,7 @@ export default function AboutPage() {
             
             <FadeIn delay={0.2} className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
+                src="/images/40e471dd-21f7-45d9-8e08-00542d6e8c47.png"
                 alt="Процесс строительства"
                 fill
                 className="object-cover"
