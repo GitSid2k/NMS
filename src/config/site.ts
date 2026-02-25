@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "НМ СТРОЙ",
+  name: "НМС",
   description: "Строительство, проектирование и инженерные изыскания",
   mainNav: [
     {

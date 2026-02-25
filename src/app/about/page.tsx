@@ -11,7 +11,7 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <SlideUp>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
-                О компании <span className="text-blue-600">НМ СТРОЙ</span>
+                О компании <span className="text-blue-600">НМС</span>
               </h1>
             </SlideUp>
             <SlideUp delay={0.1}>
@@ -32,7 +32,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold">Наша история и миссия</h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  ООО &quot;Нефтемашстрой&quot; (НМ СТРОЙ) — динамично развивающаяся строительная компания, 
+                  ООО &quot;Нефтемашстрой&quot; (НМС) — динамично развивающаяся строительная компания, 
                   которая за годы своей работы зарекомендовала себя как надежный и ответственный подрядчик.
                 </p>
                 <p>

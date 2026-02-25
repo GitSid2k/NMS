@@ -59,7 +59,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <SlideUp className="space-y-6">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">О компании НМ СТРОЙ</h2>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">О компании НМС</h2>
               <p className="text-lg text-muted-foreground">
                 Мы — команда профессионалов с многолетним опытом работы в сфере проектирования, 
                 строительства и инженерных изысканий. Наш подход основан на инновациях, 
