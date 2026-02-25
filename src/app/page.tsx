@@ -13,7 +13,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0 bg-zinc-900/80">
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent z-10" />
           <Image
-            src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2671&auto=format&fit=crop"
             alt="Строительная площадка"
             fill
             className="object-cover opacity-50"
@@ -86,7 +86,7 @@ export default function Home() {
             </SlideUp>
             <FadeIn delay={0.2} className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2671&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
                 alt="Команда инженеров"
                 fill
                 className="object-cover"
