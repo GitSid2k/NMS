@@ -11,7 +11,7 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <SlideUp>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
-                О компании <span className="text-blue-600">НМС</span>
+                О компании <span className="text-brand-600">НМС</span>
               </h1>
             </SlideUp>
             <SlideUp delay={0.1}>
@@ -61,7 +61,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats / Advantages */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-brand-600 text-white">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -72,7 +72,7 @@ export default function AboutPage() {
             ].map((stat, i) => (
               <SlideUp key={i} delay={i * 0.1} className="space-y-2">
                 <div className="text-4xl md:text-5xl font-bold">{stat.num}</div>
-                <div className="text-blue-100 font-medium">{stat.label}</div>
+                <div className="text-brand-100 font-medium">{stat.label}</div>
               </SlideUp>
             ))}
           </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
             ].map((value, i) => (
               <SlideUp key={i} delay={i * 0.1} className="flex gap-6 p-8 bg-background rounded-2xl shadow-sm border">
                 <div className="flex-shrink-0">
-                  <div className="h-12 w-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <div className="h-12 w-12 rounded-lg bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400">
                     <value.icon className="h-6 w-6" />
                   </div>
                 </div>

@@ -35,7 +35,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex gap-6 md:gap-10">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="inline-block font-bold text-xl text-blue-600 dark:text-blue-500">
+            <span className="inline-block font-bold text-xl text-brand-600 dark:text-brand-500">
               {siteConfig.name}
             </span>
           </Link>
@@ -45,9 +45,9 @@ export function Header() {
                 key={index}
                 href={item.href}
                 className={cn(
-                  "flex items-center text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400",
+                  "flex items-center text-sm font-medium transition-colors hover:text-brand-600 dark:hover:text-brand-400",
                   pathname === item.href
-                    ? "text-blue-600 dark:text-blue-400"
+                    ? "text-brand-600 dark:text-brand-400"
                     : "text-foreground/80"
                 )}
               >
@@ -58,7 +58,7 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="hidden md:flex bg-blue-600 hover:bg-blue-700 text-white" asChild>
+          <Button className="hidden md:flex bg-brand-600 hover:bg-brand-700 text-white" asChild>
             <Link href="/contacts">Связаться с нами</Link>
           </Button>
           
@@ -86,9 +86,9 @@ export function Header() {
                 key={index}
                 href={item.href}
                 className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-blue-600",
+                  "flex items-center text-lg font-medium transition-colors hover:text-brand-600",
                   pathname === item.href
-                    ? "text-blue-600"
+                    ? "text-brand-600"
                     : "text-foreground"
                 )}
               >
@@ -96,7 +96,7 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-6 border-t mt-2">
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" size="lg" asChild>
+              <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white" size="lg" asChild>
                 <Link href="/contacts">Связаться с нами</Link>
               </Button>
               <div className="mt-6 flex flex-col gap-3 text-sm text-muted-foreground">

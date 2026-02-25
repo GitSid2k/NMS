@@ -24,7 +24,7 @@ export default function Home() {
         <div className="container relative z-20 flex flex-col items-start gap-6 pt-20">
           <FadeIn delay={0.1}>
             <div className="inline-flex items-center rounded-full border border-zinc-200/20 bg-zinc-900/50 px-3 py-1 text-sm font-medium text-zinc-200 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-blue-500 mr-2"></span>
+              <span className="flex h-2 w-2 rounded-full bg-brand-500 mr-2"></span>
               Проектирование и строительство
             </div>
           </FadeIn>
@@ -42,7 +42,7 @@ export default function Home() {
           </SlideUp>
           
           <SlideUp delay={0.4} className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" asChild>
+            <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-white" asChild>
               <Link href="/services">
                 Наши услуги <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -73,7 +73,7 @@ export default function Home() {
                   "Гарантия качества на все виды работ"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-blue-600" />
+                    <CheckCircle2 className="h-5 w-5 text-brand-600" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -125,12 +125,12 @@ export default function Home() {
               }
             ].map((service, i) => (
               <SlideUp key={i} delay={i * 0.1} className="group relative bg-background p-8 rounded-2xl shadow-sm border transition-all hover:shadow-md">
-                <div className="h-12 w-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-lg bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-muted-foreground mb-6">{service.desc}</p>
-                <Link href="/services" className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400">
+                <Link href="/services" className="inline-flex items-center text-sm font-medium text-brand-600 hover:text-brand-700 dark:text-brand-400">
                   Подробнее <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </SlideUp>
@@ -140,17 +140,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-blue-600 text-white">
+      <section className="py-24 bg-brand-600 text-white">
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
             <SlideUp className="space-y-4 max-w-2xl">
               <h2 className="text-3xl sm:text-4xl font-bold">Готовы обсудить ваш проект?</h2>
-              <p className="text-blue-100 text-lg">
+              <p className="text-brand-100 text-lg">
                 Свяжитесь с нашими специалистами для получения консультации и предварительного расчета стоимости.
               </p>
             </SlideUp>
             <FadeIn delay={0.2} className="flex gap-4">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-zinc-100" asChild>
+              <Button size="lg" variant="secondary" className="bg-white text-brand-600 hover:bg-zinc-100" asChild>
                 <Link href="/contacts">Оставить заявку</Link>
               </Button>
             </FadeIn>

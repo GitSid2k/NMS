@@ -37,7 +37,7 @@ export default function ContactsPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <SlideUp delay={0.2} className="flex gap-4">
-                    <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400 flex-shrink-0">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
@@ -47,7 +47,7 @@ export default function ContactsPage() {
                   </SlideUp>
                   
                   <SlideUp delay={0.3} className="flex gap-4">
-                    <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400 flex-shrink-0">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
@@ -57,7 +57,7 @@ export default function ContactsPage() {
                   </SlideUp>
                   
                   <SlideUp delay={0.4} className="flex gap-4">
-                    <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400 flex-shrink-0">
                       <Clock className="h-5 w-5" />
                     </div>
                     <div>
@@ -69,7 +69,7 @@ export default function ContactsPage() {
 
                 <div className="space-y-6">
                   <SlideUp delay={0.5} className="flex gap-4">
-                    <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400 flex-shrink-0">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
@@ -79,7 +79,7 @@ export default function ContactsPage() {
                   </SlideUp>
 
                   <SlideUp delay={0.6} className="flex gap-4">
-                    <div className="h-10 w-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                    <div className="h-10 w-10 rounded-full bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400 flex-shrink-0">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
@@ -132,7 +132,7 @@ export default function ContactsPage() {
                   />
                 </div>
 
-                <Button type="button" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button type="button" size="lg" className="w-full bg-brand-600 hover:bg-brand-700 text-white">
                   <Send className="mr-2 h-4 w-4" /> Отправить сообщение
                 </Button>
 

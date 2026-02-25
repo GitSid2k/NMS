@@ -64,7 +64,7 @@ export default function DocumentsPage() {
             {categories.map((category, i) => (
               <SlideUp key={i} delay={i * 0.1}>
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="h-10 w-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <div className="h-10 w-10 rounded-lg bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center text-brand-600 dark:text-brand-400">
                     <category.icon className="h-5 w-5" />
                   </div>
                   <h2 className="text-2xl font-bold">{category.title}</h2>
@@ -72,7 +72,7 @@ export default function DocumentsPage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {category.docs.map((doc, j) => (
-                    <div key={j} className="flex items-center justify-between p-4 rounded-xl border bg-background hover:border-blue-500/50 hover:shadow-sm transition-all group">
+                    <div key={j} className="flex items-center justify-between p-4 rounded-xl border bg-background hover:border-brand-500/50 hover:shadow-sm transition-all group">
                       <div className="flex items-center gap-4 overflow-hidden">
                         <div className="h-10 w-10 flex-shrink-0 rounded bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
                           <FileText className="h-5 w-5 text-zinc-500" />
@@ -86,7 +86,7 @@ export default function DocumentsPage() {
                           </p>
                         </div>
                       </div>
-                      <Button variant="ghost" size="icon" className="flex-shrink-0 rounded-full group-hover:bg-blue-50 group-hover:text-blue-600 dark:group-hover:bg-blue-900/20 dark:group-hover:text-blue-400" asChild>
+                      <Button variant="ghost" size="icon" className="flex-shrink-0 rounded-full group-hover:bg-brand-50 group-hover:text-brand-600 dark:group-hover:bg-brand-900/20 dark:group-hover:text-brand-400" asChild>
                         <a href="#" download>
                           <Download className="h-4 w-4" />
                           <span className="sr-only">Скачать</span>

@@ -100,7 +100,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <SlideUp key={i} delay={i * 0.1} className="flex flex-col bg-background p-8 rounded-2xl shadow-sm border group hover:shadow-md transition-all">
-                <div className="h-14 w-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <div className="h-14 w-14 rounded-xl bg-brand-50 dark:bg-brand-900/20 flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
                   <service.icon className="h-7 w-7" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                 <div className="space-y-3 mb-8">
                   {service.details.map((detail, j) => (
                     <div key={j} className="flex items-start gap-2 text-sm">
-                      <div className="h-1.5 w-1.5 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
+                      <div className="h-1.5 w-1.5 rounded-full bg-brand-600 mt-2 flex-shrink-0" />
                       <span>{detail}</span>
                     </div>
                   ))}
@@ -128,17 +128,17 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-brand-600 text-white">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             <SlideUp>
               <h2 className="text-3xl font-bold mb-2">Нужен нестандартный подход?</h2>
-              <p className="text-blue-100 text-lg max-w-2xl">
+              <p className="text-brand-100 text-lg max-w-2xl">
                 Свяжитесь с нами, и мы разработаем индивидуальное решение специально для вашего проекта.
               </p>
             </SlideUp>
             <FadeIn delay={0.2}>
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-zinc-100 flex-shrink-0" asChild>
+              <Button size="lg" variant="secondary" className="bg-white text-brand-600 hover:bg-zinc-100 flex-shrink-0" asChild>
                 <Link href="/contacts">Обсудить проект</Link>
               </Button>
             </FadeIn>

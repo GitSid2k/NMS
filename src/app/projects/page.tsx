@@ -94,7 +94,7 @@ export default function ProjectsPage() {
                   </div>
                 </Link>
                 <div>
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-600 transition-colors">
                     <Link href="#">{project.title}</Link>
                   </h3>
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
