@@ -9,6 +9,7 @@ import { Menu, X, Phone } from "lucide-react"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Header() {
   const pathname = usePathname()
@@ -87,6 +88,8 @@ export function Header() {
             <Button className="hidden md:flex rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-md shadow-brand-600/20 hover:shadow-lg hover:shadow-brand-600/30 transition-all" asChild>
               <Link href="/contacts">Оставить заявку</Link>
             </Button>
+            
+            <ThemeToggle />
             
             <button
               className="flex items-center justify-center rounded-full p-2.5 md:hidden bg-brand-600 text-white hover:bg-brand-700 transition-colors"
